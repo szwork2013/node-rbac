@@ -2,26 +2,27 @@
 // - https://github.com/dora-js/dora-plugin-proxy#规则定义
 
 module.exports = {
-  '/api/todos': function(req, res) {
-    setTimeout(function() {
-      res.json({
-        success: true,
-        data: [
-          {
-            id: 1,
-            text: 'Learn antd',
-            isComplete: true,
-          },
-          {
-            id: 2,
-            text: 'Learn ant-tool',
-          },
-          {
-            id: 3,
-            text: 'Learn dora',
-          },
-        ],
-      });
-    }, 500);
-  },
+  //代理API到本地
+  '/api/*': 'localhost:9000',
+
+  // Mock 数据返回
+  'GET /users': [{ name: 'adam' }, { name: 'christ' }],
+  // 通过自定义函数替换请求
+  '/custom-func/:action': function (req, res) {
+    // req 和 res 的设计类 express，http://expressjs.com/en/api.html
+    //
+    // req 能取到：
+    //   1. params
+    //   2. query
+    //   3. body
+    //
+    // res 有以下方法：
+    //   1. set(object|key, value)
+    //   2. type(json|html|text|png|...)
+    //   3. status(200|404|304)
+    //   4. json(jsonData)
+    //   5. jsonp(jsonData[, callbackQueryName])
+    //   6. end(string|object)
+    //
+  }
 };
