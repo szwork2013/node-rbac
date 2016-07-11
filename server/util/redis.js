@@ -5,11 +5,11 @@
 
 const Redis = require('ioredis');
 const config = require('./../config/env/');
-const logger = require('../util/logs');
+//const logger = require('../util/logs');
 const client = new Redis(config.redis);
 
 client.on('error', function (err) {
-  logger.error('redis error', err)
+  console.log('redis error', err)
 });
 
 client.on('connect', function () {
