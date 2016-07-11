@@ -1,10 +1,31 @@
 {
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true,
+    "shared-node-browser":true
+  },
+  "globals": {
+    "it":true,
+    "describe":true
+  },
+  "installedESLint": true,
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
   "parser": "babel-eslint",
   "extends": "eslint-config-airbnb",
   "rules": {
-    "spaced-comment": [0],
-    "no-unused-vars": [0],
+    "linebreak-style": [1, "unix"],
+    "spaced-comment": [1],
+    "no-unused-vars": [1],
     "no-empty": [0],
+    "comma-dangle": [0],
     "react/wrap-multilines": [0],
     "react/no-multi-comp": [0],
     "no-constant-condition": [0],
@@ -12,9 +33,39 @@
     "react/prop-types": [0],
     "arrow-body-style": [0],
     "react/prefer-stateless-function": [0],
-    "semi": [0]
+    "semi": [0],
+    "max-len": [1, 200],
+    //add by liangwenwei
+    "no-console":[0],
+    //允许匿名方法
+    "func-names":[0],
+    //方法前空格
+    "space-before-function-paren":[0],
+    //是否可以用表达试定义对象的key
+    "object-shorthand":[0],
+    //是否允许重新纸牌参数的值
+    "no-param-reassign":[0],
+    //是否计算无用的键值
+    "no-useless-computed-key":[1],
+    "no-else-return":[0],
+    "global-require":[0],
+    "brace-style":[0],
+    "object-curly-spacing":[0],
+    "react/jsx-closing-bracket-location":[0],
+    "no-class-assign":[0],
+    "padded-blocks":[0],
+    //允许非自关闭标签
+    "react/self-closing-comp":[0],
+    "no-useless-constructor":[1],
+    "prefer-const":[1],
+    "new-cap":[0],
+    "prefer-template":[0]
   },
+  "plugins": [
+    "react"
+  ],
   "ecmaFeatures": {
-    "experimentalObjectRestSpread": true
+    "experimentalObjectRestSpread": true,
+    "jsx": true
   }
 }
