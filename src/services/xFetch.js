@@ -4,7 +4,6 @@ import querystring from 'querystring';
 import {notification} from 'antd';
 import {hashHistory} from 'react-router';
 import {signOut} from '../utils/authUtil';
-import config from '../config';
 
 const errorMessages = (res) => `${res.status} ${res.statusText}`;
 
@@ -45,7 +44,6 @@ function jsonParse(res) {
 }
 
 function xFetch(url, options) {
-  url = config.api + url;
   const opts = { ...options };
 
   const token = cookie.get('token') || '';

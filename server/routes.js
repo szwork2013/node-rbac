@@ -7,6 +7,7 @@ module.exports = function (app) {
 
   //用户管理
   app.use('/api/user', require('./api/user'));
+  app.use('/api/auth', require('./api/auth'));
 
   //未拦截的请求
   app.use('/*', function (req, res, next) {

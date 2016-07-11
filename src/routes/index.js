@@ -7,12 +7,9 @@ import {autoLogin, requireAuth} from '../utils/authUtil';
 
 const Routes = ({ history }) =>
   <Router history={history}>
-
     <Route path="/">
       <IndexRedirect to="login" />
-      <Route path="app" component={App} />
-      <Route path="actived" component={App} />
-      <Route path="completed" component={App} />
+
       <Route path="login" component={Login} onEnter={autoLogin} />
       <Route path="signup" component={SignUp} />
     </Route>

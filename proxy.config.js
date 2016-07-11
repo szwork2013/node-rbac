@@ -3,12 +3,15 @@
 
 module.exports = {
   //代理API到本地
-  '/api/*': 'localhost:9000',
+  '/api/*': 'http://localhost:9000',
 
   // Mock 数据返回
-  'GET /users': [{ name: 'adam' }, { name: 'christ' }],
+  // 'POST /api/auth/login': function(req,res){
+  //   console.log('fff')
+  //   res.json({isError:false,data:null,message:'ffff'})
+  // },
   // 通过自定义函数替换请求
-  '/custom-func/:action': function (req, res) {
+  //'/custom-func/:action': function (req, res) {
     // req 和 res 的设计类 express，http://expressjs.com/en/api.html
     //
     // req 能取到：
@@ -24,5 +27,5 @@ module.exports = {
     //   5. jsonp(jsonData[, callbackQueryName])
     //   6. end(string|object)
     //
-  }
+  //}
 };

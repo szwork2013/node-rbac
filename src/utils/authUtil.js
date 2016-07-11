@@ -3,7 +3,6 @@
  */
 import cookie from 'react-cookie'
 import xFetch from '../services/xFetch';
-import config from '../config';
 export function saveCookie(name, value) {
   //设置cookie7天有效
   cookie.save(name, value, { maxAge: 60 * 60 * 24 * 7 });
@@ -29,7 +28,7 @@ export function autoLogin(next, replace, callback) {
   //已经登录则不进入
   if (isLogin()) {
     //向服务器验证token有效性
-    xFetch.post(`${config.api}api/account/checkToken`).then((result)=> {
+    xFetch.post(`api/account/checkToken`).then((result)=> {
       console.log('验证成功!')
       replace('/app');
       callback();

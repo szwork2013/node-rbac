@@ -92,7 +92,7 @@ class LoginForm extends React.Component {
               {...passwdProps} type="password"
               onContextMenu={noop}
               onPaste={noop}
-              nCopy={noop}
+              onCopy={noop}
               onCut={noop}
               placeholder="密码"
               />
