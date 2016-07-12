@@ -1,14 +1,16 @@
 import React, { Component, PropTypes } from 'react';
-import MainLayout from '../layouts/MainLayout/MainLayout';
+import Layout from '../layouts/Shared/Layout';
 
-const App = ({ location }) => {
+const App = ({ children }) => {
   return (
-    <MainLayout>
-    </MainLayout>
+    <Layout>
+      {children}
+    </Layout>
   );
 };
 
 App.propTypes = {
+  children: PropTypes.element.isRequired,
 };
 
 export default App;

@@ -6,10 +6,9 @@ module.exports = {
   '/api/*': 'http://localhost:9000',
 
   // Mock 数据返回
-  // 'POST /api/auth/login': function(req,res){
-  //   console.log('fff')
-  //   res.json({isError:false,data:null,message:'ffff'})
-  // },
+  'POST /api/auth/login': function(req,res){
+    res.json({isError:false,data:{token:'ffff'},message:'ffff'})
+  },
   // 通过自定义函数替换请求
   //'/custom-func/:action': function (req, res) {
     // req 和 res 的设计类 express，http://expressjs.com/en/api.html

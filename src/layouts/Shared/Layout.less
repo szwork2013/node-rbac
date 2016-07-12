@@ -1,70 +1,140 @@
-.normal {
-  display: flex;
-  flex-direction: column;
+.ant-layout-aside {
+  position: relative;
+  min-height: 100%;
+}
+
+.ant-layout-aside .ant-layout-logo {
+  width: 150px;
+  height: 32px;
+  background: #333;
+  border-radius: 6px;
+  margin: 16px 24px 16px 28px;
+  transition: all 0.3s ease;
+  color:white;
+  font-size: 48px;
+}
+
+.ant-layout-aside-collapse .ant-layout-logo {
+  width: 32px;
+  margin: 16px;
+  transition: all 0.3s ease;
+}
+
+.ant-layout-aside .ant-layout-sider {
+  width: 224px;
+  background: #404040;
+  position: absolute;
+  overflow: visible;
+  padding-bottom: 24px;
   height: 100%;
-  background: #ececec;
+  transition: all 0.3s ease;
 }
 
-.nobg {
-  background: transparent!important;
+.ant-layout-aside-collapse .ant-layout-sider {
+  width: 64px;
+  transition: all 0.3s ease;
 }
 
-.wrapper {
-  padding: 0 20px;
-}
-
-.head {
+.ant-layout-aside .ant-layout-sider > .ant-menu {
   margin-bottom: 20px;
-  // background: #404040;
-  // height: 64px;
+}
+
+.ant-layout-aside .ant-layout-sider > .ant-menu > .ant-menu-item {
+  margin: 16px 0;
+}
+
+.ant-layout-aside .ant-layout-sider > .ant-menu > .ant-menu-item .nav-text {
+  vertical-align: baseline;
+  display: inline-block;
+}
+
+.ant-layout-aside .ant-layout-sider > .ant-menu > .ant-menu-item > .anticon {
+  transition: font-size .3s;
+}
+
+.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-item {
+  transition: all 0s ease;
+}
+
+.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-item > .anticon {
+  font-size: 16px;
+  display: inline-block;
+}
+
+.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-item .nav-text {
+  display: none;
+}
+
+.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-item:hover {
+  background: #2db7f5;
   color: #fff;
+  transition: all 0s ease;
 }
 
-.logo {
-  // line-height: 64px;
-  color: black;
-  font-size: 1.6em;
-  margin-right: 30px;
-  float: left;
-  margin-left: 20px;
-  line-height: 46px;
+.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-item:hover .nav-text {
+  display: inline-block;
+  vertical-align: top;
+  background: #2db7f5;
+  color: #fff;
+  padding-right: 16px;
+  border-radius: 0 5px 5px 0;
 }
 
-.topMenu {
-  line-height: 64px;
-  height: 64px;
-  font-size: 1.3em;
-}
-
-.content {
-  flex: 1 0 auto;
-  margin:0 20px 10px;
-  background: white;
-}
-
-.side {
-  padding: 8px;
-  width: 20%;
-  min-width: 200px;
-  margin-right: 20px;
-}
-
-.main {
-  padding: 8px;
-}
-
-.foot {
-  margin-top: 10px;
+/* 实际使用中需要改成 position: fixed */
+.ant-layout-aside .ant-aside-action {
+  height: 42px;
+  width: 224px;
+  position: absolute;
+  bottom: 0;
+  background: #656565;
+  color: #fff;
   text-align: center;
-  padding: 0 8px;
-  background: #1C262E;
+  line-height: 42px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.foot p {
-  height: 40px;
-  line-height: 40px;
+.ant-layout-aside-collapse .ant-aside-action {
+  width: 64px;
+  transition: all 0.3s ease;
 }
 
-.breadcrumbs {
-  margin:0 10px 10px 20px;
+.ant-layout-aside .ant-layout-header {
+  background: #fff;
+  height: 64px;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.ant-layout-aside .ant-layout-breadcrumb {
+  margin: 7px 0 -17px 24px;
+}
+
+.ant-layout-aside .ant-layout-main {
+  margin-left: 224px;
+  transition: all 0.3s ease;
+}
+
+.ant-layout-aside-collapse .ant-layout-main {
+  margin-left: 64px;
+  transition: all 0.3s ease;
+}
+
+.ant-layout-aside .ant-layout-container {
+  margin: 24px 16px;
+}
+
+.ant-layout-aside .ant-layout-content {
+  background: #fff;
+  padding: 24px;
+}
+
+.ant-layout-aside .ant-layout-footer {
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  background: #fff;
+  border-top: 1px solid #e9e9e9;
+  width: 100%;
 }
